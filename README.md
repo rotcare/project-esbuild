@@ -1,2 +1,3 @@
 # project-esbuild
-用 esbuild 把 project 构建为 javascript
+
+对接 esbuild 的构建工具链

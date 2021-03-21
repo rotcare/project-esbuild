@@ -1,0 +1,12 @@
+{
+    "name": "@rotcare/project-esbuild",
+    "version": "0.1.0",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/rotcare/project-esbuild.git"
+    },
+    "main": "index.ts",
+    "peerDependencies": {
+        "@rotcare/project": "*"
+    }
+}
