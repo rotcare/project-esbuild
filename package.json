@@ -6,6 +6,9 @@
         "url": "https://github.com/rotcare/project-esbuild.git"
     },
     "main": "index.ts",
+    "dependencies": {
+        "esbuild": "^0.9.6"
+    },
     "peerDependencies": {
         "@rotcare/project": "*"
     }
