@@ -18,11 +18,10 @@ export function esbuildPlugin(options: { project: Project }): Plugin {
                 }
             });
             build.onLoad({ namespace: '@motherboard', filter: /^@motherboard\// }, async (args) => {
-                const projectFile = await buildFile(project, args.path.substr('@motherboard/'.length));
+                const jsCode = await buildFile(project, args.path.substr('@motherboard/'.length));
                 return {
-                    resolveDir: projectFile.resolveDir,
-                    contents: projectFile.code,
-                    loader: projectFile.isTsx ? 'tsx' : 'ts',
+                    resolveDir: project.projectDir,
+                    contents: jsCode,
                 };
             });
         },
