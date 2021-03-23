@@ -8,6 +8,6 @@
 yarn add @rotcare/project-esbuild --dev
 ```
 
-* [esbuildPlugin](./src/esbuildPlugin)
-* [buildBackend](./src/buildBacckend)
-* [buildFrontend](./src/buildFrontend)
+* [esbuildPlugin](./src/esbuildPlugin.ts)
+* [buildBackend](./src/buildBacckend.ts)
+* [buildFrontend](./src/buildFrontend.ts)
