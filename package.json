@@ -5,14 +5,18 @@
         "type": "git",
         "url": "https://github.com/rotcare/project-esbuild.git"
     },
+    "homepage": "https://rot.care/codegen/",
     "main": "src/index.ts",
     "dependencies": {
         "esbuild": "^0.9.6"
+    },
+    "devDependencies": {
+        "typedoc": "^0.20.33"
     },
     "peerDependencies": {
         "@rotcare/project": "*"
     },
     "scripts": {
-        "release": "tsc"
+        "release": "tsc && typedoc src/index.ts"
     }
 }
