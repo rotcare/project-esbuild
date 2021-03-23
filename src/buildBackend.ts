@@ -22,7 +22,7 @@ export async function buildBackend(project: Project) {
             format: 'cjs',
             write: false,
             absWorkingDir: project.projectDir,
-            plugins: [esbuildPlugin({ project })],
+            plugins: [esbuildPlugin(project)],
             incremental: true,
         }) as Promise<esbuild.BuildIncremental>);
     }
