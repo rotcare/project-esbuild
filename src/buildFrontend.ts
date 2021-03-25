@@ -5,11 +5,11 @@ import { esbuildPlugin } from './esbuildPlugin';
 let result: esbuild.BuildIncremental;
 
 /**
- * 增量构建 `@motherboard/frontend` 这个入口的前端应用，适配浏览器环境。可重复调用，内部缓存了中间结果。
+ * 增量构建前端应用，适配浏览器环境。可重复调用，内部缓存了中间结果。
  * @param project 要构建的项目
  * @returns 构建结果
  */
-export async function buildFrontend(project: Project) {
+export async function buildFrontend(project: Project, entryPoint: string) {
     if (result) {
         result = await result.rebuild();
     } else {
@@ -17,7 +17,7 @@ export async function buildFrontend(project: Project) {
             sourcemap: 'inline',
             keepNames: true,
             bundle: true,
-            entryPoints: ['@motherboard/frontend'],
+            entryPoints: [entryPoint],
             write: false,
             platform: 'browser',
             target: 'es2020',
